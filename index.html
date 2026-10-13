@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#080b11" />
+  <meta name="description" content="A cinematic, interactive guide to Interstellar: its planets, timeline, and the full story." />
+  <title>Interstellar — A journey through time</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="progress" aria-hidden="true"><span id="page-progress"></span></div>
+  <header class="topbar">
+    <a class="wordmark" href="#home" aria-label="Interstellar guide home"><span class="mark">✳</span> FIELD NOTES <i>/</i> 01</a>
+    <nav aria-label="Main navigation"><a href="#journey">THE JOURNEY</a><a href="#timeline">TIMELINE</a><a href="#ending">THE ENDING</a></nav>
+    <button class="sound-toggle" id="sound-toggle" aria-label="Toggle ambient sound" title="Ambient sound is off"><span class="sound-bars"><i></i><i></i><i></i><i></i></span><span id="sound-label">SOUND OFF</span></button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="stars" aria-hidden="true"></div><div class="hero-glow" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="eyebrow"><span class="live-dot"></span> A FIELD GUIDE TO THE IMPOSSIBLE</p>
+        <h1>Somewhere,<br /><em>something</em> incredible<br />is waiting to be known.</h1>
+        <p class="hero-copy">A journey across worlds, years, and the space between a father and his daughter.</p>
+        <a class="explore-link" href="#journey"><span class="arrow-circle">↓</span> FOLLOW THE JOURNEY <span class="link-duration">2H 49M · FULL STORY</span></a>
+      </div>
+      <div class="hero-caption"><span>THE ENDURANCE MISSION</span><span>WORMHOLE // SATURN</span></div>
+      <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+      <div class="hero-planet" aria-hidden="true"><div class="planet-shadow"></div><div class="planet-ring"></div></div>
+      <div class="hero-coordinate">N 00° 00′ 00″<br />GARGANTUA SYSTEM</div>
+      <div class="scroll-cue">SCROLL TO DESCEND <span>↓</span></div>
+    </section>
+
+    <section class="intro section-pad" id="journey">
+      <div class="section-kicker"><span>01</span><span class="rule"></span><span>THE EXPEDITION</span></div>
+      <div class="intro-grid">
+        <h2>Earth is running<br />out of <em>time.</em></h2>
+        <div class="intro-text"><p>A blight is destroying crops. Dust storms swallow the sky. Former pilot Joseph Cooper is raising his children in a world that has given up looking upward—until a trail of gravity anomalies leads him to a secret NASA outpost.</p><p>Beyond a wormhole near Saturn, three explorers have signaled from worlds that might give humanity a future. Cooper must choose between staying with his children and carrying the species toward a new home.</p><a class="text-link" href="#timeline">THE STORY, IN ORDER <span>↗</span></a></div>
+      </div>
+      <div class="mission-stats"><div><strong>3</strong><span>WORLDS SCOUTED</span></div><div><strong>1</strong><span>HOUR ON MILLER’S</span></div><div><strong>23<span class="unit">YRS</span></strong><span>LOST TO TIME</span></div><div><strong>1</strong><span>MESSAGE TO GET HOME</span></div></div>
+    </section>
+
+    <section class="planets section-pad">
+      <div class="section-kicker"><span>02</span><span class="rule"></span><span>THREE SIGNALS</span></div>
+      <div class="planets-heading"><div><p class="eyebrow">THE LAZARUS CANDIDATES</p><h2>Worlds beyond<br /><em>the wormhole.</em></h2></div><p class="heading-note">The Endurance can reach only one world at a time. Each signal is a promise—and a risk.</p></div>
+      <div class="planet-tabs" role="tablist" aria-label="Candidate planets">
+        <button class="planet-tab active" data-planet="miller" role="tab" aria-selected="true"><span>01</span> MILLER <i>→</i></button>
+        <button class="planet-tab" data-planet="mann" role="tab" aria-selected="false"><span>02</span> MANN <i>→</i></button>
+        <button class="planet-tab" data-planet="edmunds" role="tab" aria-selected="false"><span>03</span> EDMUNDS <i>→</i></button>
+      </div>
+      <article class="planet-panel" id="planet-panel" aria-live="polite">
+        <div class="planet-art art-miller" id="planet-art"><div class="planet-disc"></div><div class="planet-atmosphere"></div><div class="planet-wave wave-a"></div><div class="planet-wave wave-b"></div><div class="planet-art-label">GARGANTUA SYSTEM <span>01 / 03</span></div><div class="planet-art-coord">00° 00′ 00″ N<br />WATER WORLD</div></div>
+        <div class="planet-info"><div class="planet-meta"><span id="planet-type">WATER WORLD</span><span id="planet-status">VISITED · MISSION LOSS</span></div><h3 id="planet-title">Miller’s<br /><em>planet.</em></h3><p id="planet-desc">A shallow ocean beneath Gargantua’s shadow. Here, gravity turns the horizon into a wall of water—and minutes become years.</p><div class="planet-facts" id="planet-facts"><div><span>TIME DILATION</span><strong>1 hour = 7 years</strong></div><div><span>WHAT THEY FIND</span><strong>A wave. No refuge.</strong></div><div><span>COST TO THE CREW</span><strong>23 years · Doyle</strong></div></div><div class="planet-controls"><button id="prev-planet" aria-label="Previous planet">←</button><span id="planet-count">01 <i>/</i> 03</span><button id="next-planet" aria-label="Next planet">→</button></div></div>
+      </article>
+      <p class="planet-footnote">Edmunds’ world is never visited by the crew on screen. Its discovery is shown in the final sequence. Planet conditions are presented as depicted in the film.</p>
+    </section>
+
+    <section class="time-section section-pad" id="timeline">
+      <div class="section-kicker"><span>03</span><span class="rule"></span><span>THE TWO CLOCKS</span></div>
+      <div class="time-heading"><div><p class="eyebrow">SAME STORY. DIFFERENT SPEEDS.</p><h2>Time doesn’t<br /><em>wait for anyone.</em></h2></div><div class="time-explainer"><p>On Miller’s planet, the crew spends a little over an hour. Far away from Gargantua, 23 years pass. Follow both clocks through the story.</p><div class="clock-key"><span><i class="key-earth"></i> EARTH / SHIP TIME</span><span><i class="key-miller"></i> MILLER’S PLANET</span></div></div></div>
+      <div class="timeline-wrap"><div class="timeline-track"><div class="track-line"></div><div class="timeline-progress" id="timeline-progress"></div><div class="timeline-events" id="timeline-events"></div></div><div class="timeline-detail" id="timeline-detail"><span class="timeline-index">01 / 08</span><div><span class="timeline-place">EARTH · THE FARM</span><h3>Dust in the air.<br />A signal in the room.</h3><p>Cooper and Murph follow a pattern of falling dust to a hidden NASA base. The journey begins with a decision that will cost them both years.</p></div><button class="timeline-next" id="timeline-next">NEXT EVENT <span>→</span></button></div><div class="timeline-controls"><button id="timeline-prev" aria-label="Previous timeline event">←</button><span>SELECT A MARKER TO TRAVEL THROUGH THE STORY</span><button id="timeline-next-bottom" aria-label="Next timeline event">→</button></div></div>
+    </section>
+
+    <section class="story section-pad">
+      <div class="section-kicker"><span>04</span><span class="rule"></span><span>THE FULL STORY</span></div>
+      <div class="story-heading"><h2>One mission.<br /><em>One family.</em></h2><p>Four chapters across the years. Expand each to trace the full arc.</p></div>
+      <div class="chapters" id="chapters">
+        <article class="chapter open"><button class="chapter-head"><span class="chapter-no">01</span><span class="chapter-title">THE DEPARTURE</span><span class="chapter-time">EARTH</span><span class="chapter-icon">−</span></button><div class="chapter-body"><p>On a blighted Earth, former NASA pilot Cooper and his daughter Murph discover a gravitational message leading to NASA’s hidden base. Professor Brand recruits Cooper to pilot the Endurance through a wormhole near Saturn. The mission has two possible plans: bring Earth’s population to a new home, or carry frozen embryos to seed one. Cooper promises Murph he will return.</p></div></article>
+        <article class="chapter"><button class="chapter-head"><span class="chapter-no">02</span><span class="chapter-title">THE LOST YEARS</span><span class="chapter-time">MILLER’S PLANET</span><span class="chapter-icon">+</span></button><div class="chapter-body"><p>The crew lands on Miller’s ocean world, dangerously close to Gargantua. A tidal wave kills Doyle and destroys the lander. The delay costs them 23 years aboard the Endurance. On Earth, Murph grows up, works with NASA, and learns Professor Brand’s equation cannot solve Plan A without data from inside a black hole. Brand had known this; Plan B was always his real plan.</p></div></article>
+        <article class="chapter"><button class="chapter-head"><span class="chapter-no">03</span><span class="chapter-title">THE LIE</span><span class="chapter-time">MANN’S PLANET</span><span class="chapter-icon">+</span></button><div class="chapter-body"><p>With fuel for one destination, Cooper chooses the still-transmitting Dr. Mann over Edmunds’ silent world. Mann admits his planet is uninhabitable and that he faked the data to be rescued. He tries to take the Endurance, but a failed docking attempt kills him and damages the ship. Romilly is also killed by a booby-trapped robot. Cooper and Amelia Brand survive, with just enough fuel for a desperate maneuver.</p></div></article>
+        <article class="chapter"><button class="chapter-head"><span class="chapter-no">04</span><span class="chapter-title">THE ANSWER</span><span class="chapter-time">GARGANTUA → SATURN</span><span class="chapter-icon">+</span></button><div class="chapter-body"><p>Cooper and TARS fall into Gargantua so Brand can reach Edmunds’ planet. Inside, Cooper enters a tesseract where he can see Murph’s bedroom across time. He realizes he was the “ghost” behind the dust and watch messages. Using gravity, he sends TARS’s quantum data to adult Murph through the second hand of Cooper’s watch. Murph solves the equation, helping humanity leave Earth. The tesseract releases Cooper near Saturn, where he is rescued and reunited with an elderly Murph. He leaves to find Brand, who has reached Edmunds’ habitable world.</p></div></article>
+      </div>
+    </section>
+
+    <section class="ending" id="ending"><div class="ending-stars"></div><div class="ending-inner"><p class="eyebrow">THE LAST TRANSMISSION</p><h2>We are here<br /><em>for you.</em></h2><p class="ending-copy">Across the distance, across the years—love becomes the signal that finds its way home.</p><a href="#home" class="back-top">RETURN TO THE BEGINNING <span>↑</span></a><div class="ending-credit">INTERSTELLAR · 2014 <span>A STORY ABOUT TIME, GRAVITY, AND HOME</span></div></div><div class="ending-orb" aria-hidden="true"></div></section>
+  </main>
+  <section class="sources section-pad" aria-label="Research sources"><div class="section-kicker"><span>05</span><span class="rule"></span><span>FURTHER READING</span></div><div class="sources-row"><p>Story details checked against the official film synopsis and screenplay.</p><div><a href="https://www.paramountpictures.com/movies/interstellar" target="_blank" rel="noreferrer">PARAMOUNT · FILM SYNOPSIS ↗</a><a href="https://assets.scriptslug.com/live/pdf/scripts/interstellar-2014.pdf" target="_blank" rel="noreferrer">INTERSTELLAR · SCREENPLAY ↗</a></div></div></section>
+  <footer><span>FIELD NOTES 01</span><span>STORY GUIDE · SPOILERS THROUGHOUT</span><a href="#home">BACK TO TOP ↑</a></footer>
+</body>
+</html>
